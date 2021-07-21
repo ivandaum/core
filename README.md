@@ -1,3 +1,6 @@
-# SCSS core
+# Core
 
-A scss core for my projects with default variables / helpers / basic html values
+All the helpers I use in project
+- SCSS : variables / helpers / basic html values
+- Javascript : tools & utils
+- Basic configuration : eslint / webpack

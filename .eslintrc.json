@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/base"
+  ],
+  "plugins": [],
+  "rules": {
+    "max-len": "off",
+    "no-console": "off"
+  },
+  "parserOptions": {}
+}

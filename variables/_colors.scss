@@ -1,0 +1,12 @@
+$colors: (
+    'black': #111,
+    'white': #fff,
+);
+
+@function color($name) {
+    @if map-has-key($colors, $name) == false {
+        @error 'Color not defined: `#{$name}`';
+    }
+
+    @return map-get($colors, $name);
+}

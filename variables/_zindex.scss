@@ -1,0 +1,9 @@
+$z-index: (
+	nav: 90,
+	section: 10,
+	base: 1,
+);
+
+@function zindex($key) {
+	@return get-array-value($z-index, $key, 1);
+}

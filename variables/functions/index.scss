@@ -1,0 +1,11 @@
+@function get-array-value($var, $key, $default: 1) {
+    @if map-has-key($var, $key) {
+        @return map-get($var, $key);
+    } @else {
+        @return $default;
+    }
+}
+
+@function vh($v) {
+    @return calc(var(--vh) * #{$v});
+}

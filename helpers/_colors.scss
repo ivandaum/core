@@ -1,0 +1,15 @@
+@each $name, $color in $colors {
+    .has-color-#{$name} {
+        color: $color !important;
+
+        @include desktop {
+            &-hover:hover {
+                color: $color !important;
+            }
+        }
+    }
+
+    .has-background-#{$name} {
+        background: $color !important;
+    }
+}

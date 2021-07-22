@@ -5,12 +5,13 @@
 **/
 
 .is-column {
-    @for $i from 1 through 12 {
-        $value: $i / 12 * 100%;
+  @for $i from 1 through 12 {
+    $value: $i / 12 * 100%;
 
-        &.is-#{$i} {
-            @include responsive-support(width, $value);
-            width: $value;
-        }
+    &.is-#{$i} {
+      @include responsive-support(width, $value);
+
+      width: $value;
     }
+  }
 }

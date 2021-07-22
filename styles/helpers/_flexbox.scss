@@ -1,58 +1,58 @@
 .is-justified {
-    justify-content: space-between;
+  justify-content: space-between;
 
-    &-x {
-        justify-content: space-between;
-    }
+  &-x {
+    justify-content: space-between;
+  }
 }
 
 .is-space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .is-baseline {
-    align-items: baseline;
+  align-items: baseline;
 }
 
 .is-center {
+  align-items: center;
+  justify-content: center;
+
+  &-y {
     align-items: center;
+  }
+
+  &-x {
     justify-content: center;
-
-    &-y {
-        align-items: center;
-    }
-
-    &-x {
-        justify-content: center;
-    }
+  }
 }
 
 .is-left {
-    justify-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &-y {
     align-items: flex-start;
+  }
 
-    &-y {
-        align-items: flex-start;
-    }
-
-    &-x {
-        justify-content: flex-start;
-    }
+  &-x {
+    justify-content: flex-start;
+  }
 }
 
 .is-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  &-x {
     justify-content: flex-end;
+  }
+
+  &-y {
     align-items: flex-end;
-
-    &-x {
-        justify-content: flex-end;
-    }
-
-    &-y {
-        align-items: flex-end;
-    }
+  }
 }
 
 .is-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }

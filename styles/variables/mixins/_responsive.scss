@@ -1,25 +1,25 @@
 @mixin responsive-support($property, $value) {
-    &-desktop {
-        @include desktop {
-            #{$property}: $value !important;
-        }
+  &-desktop {
+    @include desktop {
+      #{$property}: $value !important;
     }
+  }
 
-    &-touch {
-        @include touch {
-            #{$property}: $value !important;
-        }
+  &-touch {
+    @include touch {
+      #{$property}: $value !important;
     }
+  }
 
-    &-tablet {
-        @include tablet-only {
-            #{$property}: $value !important;
-        }
+  &-tablet {
+    @include tablet-only {
+      #{$property}: $value !important;
     }
+  }
 
-    &-phone {
-        @include phone {
-            #{$property}: $value !important;
-        }
+  &-phone {
+    @include phone {
+      #{$property}: $value !important;
     }
+  }
 }

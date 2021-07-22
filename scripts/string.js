@@ -1,9 +1,3 @@
-export const getOffsetTop = ($element) => {
-  const bodyRect = document.body.getBoundingClientRect();
-  const elemRect = $element.getBoundingClientRect();
-  return elemRect.top - bodyRect.top;
-};
-
 export const slugify = (string) => string
   .replace(/<(.*?)>/, '-')
   .toLowerCase()
@@ -27,20 +21,4 @@ export const copyToClipboard = (str) => {
     document.getSelection().removeAllRanges();
     document.getSelection().addRange(selected);
   }
-};
-
-export const konami = (callback) => {
-  const k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-  let n = 0;
-  document.addEventListener('keydown', (e) => {
-    if (e.keyCode === k[n++]) {
-      if (n === k.length) {
-        callback();
-        n = 0;
-        return false;
-      }
-    } else {
-      n = 0;
-    }
-  });
 };

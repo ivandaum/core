@@ -1,14 +1,12 @@
-export default class {
+import { createUniqueIndex } from '../math';
+
+export default class Manager {
   constructor() {
     this.callbacks = [];
   }
 
-  static createIndex() {
-    return Date.now().toString(36) + Math.random().toString(36).substr(2);
-  }
-
   addQueue(func) {
-    const index = this.createIndex();
+    const index = createUniqueIndex();
     this.callbacks[index] = func;
     return index;
   }
@@ -22,8 +20,8 @@ export default class {
     return false;
   }
 
-  doCallbacks() {
-    this.callbacks.forEach((key) => {
+  processQueue() {
+    Object.keys(this.callbacks).forEach((key) => {
       if (this.callbacks[key]) {
         this.callbacks[key]();
       }

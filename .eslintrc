@@ -4,8 +4,7 @@
     "commonjs": true
   },
   "extends": [
-    "airbnb-base",
-    "plugin:vue/base"
+    "airbnb-base"
   ],
   "plugins": [],
   "rules": {

@@ -8,7 +8,7 @@ class RafManager extends Manager {
 
   render() {
     this.raf = requestAnimationFrame(this.render.bind(this));
-    this.doCallbacks();
+    this.processQueue();
   }
 }
 

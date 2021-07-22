@@ -1,0 +1,34 @@
+{
+  "name": "Core",
+  "description": "All the helpers I use in project",
+  "scripts": {
+    "watch": "webpack --mode development --watch",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-vue": "^7.14.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "vue-eslint-parser": "^7.9.0",
+    "vue-loader": "^15.9.6",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

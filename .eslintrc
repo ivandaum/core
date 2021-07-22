@@ -9,7 +9,8 @@
   "plugins": [],
   "rules": {
     "max-len": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-param-reassign": false
   },
   "parserOptions": {}
 }

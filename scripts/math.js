@@ -9,3 +9,11 @@ export const createUniqueIndex = () => Date.now().toString(36) + Math.random().t
 export const distance2d = (p1, p2) => Math.sqrt((Math.pow) + (Math.pow(p2[1] - p1[1], 2)));
 
 export const roundFloat = (d) => Math.floor(d * 100) * 0.01;
+
+export const shuffleArray = (a) => {
+  for (let i = a.length; i; i--) {
+    const j = Math.floor(Math.random() * i);
+    [a[i - 1], a[j]] = [a[j], a[i - 1]];
+  }
+  return a;
+};

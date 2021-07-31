@@ -1,9 +1,3 @@
-export const getOffsetTop = ($el) => {
-  const body = document.body.getBoundingClientRect();
-  const el = $el.getBoundingClientRect();
-  return el.top - body.top;
-};
-
 export const konami = (done) => {
   const k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
   let i = 0;

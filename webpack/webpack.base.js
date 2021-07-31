@@ -1,40 +1,17 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        },
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.(ttf|eot|woff|woff2|svg)$/,
-        loader: 'url-loader',
-        options: {
-          name: '[name].[ext]',
-        },
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        loader: 'url-loader',
-      },
-    ],
+const config = {
+  mode: 'none',
+  entry: path.resolve(__dirname, './src/index.js'),
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index.js',
   },
-  optimization: {
-    minimizer: [new UglifyJsPlugin({})],
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, './src'),
+    },
   },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: 'index.css' }),
-  ],
 };
+
+module.exports = config;

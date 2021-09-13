@@ -18,7 +18,7 @@ $directions: (
       // example : m-0 ==> margin: 0px;
       #{$property}: $value;
 
-      @include responsive-support($property, $value);
+      @include generate-breakpoints($property, $value);
     }
 
     @each $direction, $direction-shortcut in $directions {
@@ -26,7 +26,7 @@ $directions: (
       .#{$side-shortcut}#{$direction-shortcut}-#{$i} {
         #{$property}-#{$direction}: $value;
 
-        @include responsive-support(#{$property}-#{$direction}, $value);
+        @include generate-breakpoints(#{$property}-#{$direction}, $value);
       }
     }
   }

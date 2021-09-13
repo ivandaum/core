@@ -1,4 +1,4 @@
-@mixin responsive-support($property, $value) {
+@mixin generate-breakpoints($property, $value) {
   &-desktop {
     @include desktop {
       #{$property}: $value !important;

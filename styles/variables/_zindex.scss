@@ -2,8 +2,14 @@ $z-index: (
   nav: 90,
   section: 10,
   base: 1,
-);
+) !default;
 
 @function zindex($key) {
-  @return get-array-value($z-index, $key, 1);
+  @if map-has-key($z-index, $key) {
+    @return map-get($z-index, $key);
+  }
+
+  @else {
+    @return 1;
+  }
 }

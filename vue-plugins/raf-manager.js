@@ -23,11 +23,11 @@ class RafManager {
     return false;
   }
 
-  render() {
+  render(t) {
     this.raf = requestAnimationFrame(this.render.bind(this));
     Object.keys(this.callbacks).forEach((key) => {
       if (this.callbacks[key]) {
-        this.callbacks[key]();
+        this.callbacks[key](t);
       }
     });
   }
